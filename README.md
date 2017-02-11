@@ -47,3 +47,13 @@ docker container stop "my-lighttpd"
 ## Using with kubernetes
 
 There is a `static` directory here, that is intended to be mounted into container at `/var/www/htdocs`
+
+
+## Docker Hub
+
+``` shell
+docker login
+TAG_VERSION=0.1.0
+docker build -t dpcrook/alpine-lighttpd-static:${TAG_VERSION} .
+docker push dpcrook/alpine-lighttpd-static:${TAG_VERSION}
+```
