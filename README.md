@@ -46,7 +46,17 @@ docker container stop "my-lighttpd"
 
 ## Using with kubernetes
 
-There is a `static` directory here, that is intended to be mounted into container at `/var/www/htdocs`
+There is `./static` directory in repo as a placeholder.  The static files to host are intended to be mounted into container at `/var/www/htdocs`
+
+e.g. in your `spec.containers`:
+
+```
+ ...
+        volumeMounts:
+        - mountPath: /var/www/htdocs/
+          name: lighttpd-persistent-storage
+ ...
+```
 
 
 ## Docker Hub
