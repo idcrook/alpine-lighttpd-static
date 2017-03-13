@@ -4,6 +4,8 @@ Intended to serve static pages, on a kubernetes cluster.
 
 See [lighttpd](http://www.lighttpd.net/)
 
+ - https://hub.docker.com/r/dpcrook/alpine-lighttpd-static/
+ - https://hub.docker.com/r/dpcrook/alpine-lighttpd-static-arm64/
 
 ## Build and testing with docker
 
@@ -66,4 +68,15 @@ docker login
 TAG_VERSION=0.1.0
 docker build -t dpcrook/alpine-lighttpd-static:${TAG_VERSION} .
 docker push dpcrook/alpine-lighttpd-static:${TAG_VERSION}
+```
+
+#### arm64 version
+
+```
+docker build -t dpcrook/alpine-lighttpd-static-arm64 -f Dockerfile.arm64 .
+docker push dpcrook/alpine-lighttpd-static-arm64
+
+docker run --name "my-lighttpd" --rm  -P -t -d \
+	-v `pwd`/static:/var/www/htdocs \
+	dpcrook/alpine-lighttpd-static-arm64
 ```
