@@ -65,9 +65,12 @@ e.g. in your `spec.containers`:
 
 ``` shell
 docker login
-TAG_VERSION=0.1.0
-docker build -t dpcrook/alpine-lighttpd-static:${TAG_VERSION} .
+TAG_VERSION=0.1.1
+docker build --no-cache -t alpine-lighttpd-static:${TAG_VERSION} .
+docker tag alpine-lighttpd-static:${TAG_VERSION} dpcrook/alpine-lighttpd-static:${TAG_VERSION}
+docker tag alpine-lighttpd-static:${TAG_VERSION} dpcrook/alpine-lighttpd-static:latest
 docker push dpcrook/alpine-lighttpd-static:${TAG_VERSION}
+docker push dpcrook/alpine-lighttpd-static:latest
 ```
 
 #### arm64 version
