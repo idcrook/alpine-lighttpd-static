@@ -97,6 +97,8 @@ docker stop
 
 docker tag  alpine-lighttpd-static-arm32v6:${TAG_VERSION} dpcrook/alpine-lighttpd-static:${TAG_VERSION}-arm32v6
 docker push                                               dpcrook/alpine-lighttpd-static:${TAG_VERSION}-arm32v6
-docker tag  alpine-lighttpd-static-arm32v6:${TAG_VERSION} dpcrook/alpine-lighttpd-static:latest-arm32v6
-docker push                                               dpcrook/alpine-lighttpd-static:latest-arm32v6
+docker tag  alpine-lighttpd-static-arm32v6:${TAG_VERSION} dpcrook/alpine-lighttpd-static:latest
+docker tag  alpine-lighttpd-static-arm32v6:${TAG_VERSION} dpcrook/alpine-lighttpd-static:arm32v6
+docker push                                               dpcrook/alpine-lighttpd-static:latest
+docker push                                               dpcrook/alpine-lighttpd-static:arm32v6
 ```
