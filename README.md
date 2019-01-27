@@ -83,3 +83,20 @@ docker run --name "my-lighttpd" --rm  -P -t -d \
 	-v `pwd`/static:/var/www/htdocs \
 	dpcrook/alpine-lighttpd-static-arm64
 ```
+
+#### arm32v6 version
+
+```
+TAG_VERSION=0.1.4
+docker build --no-cache -t alpine-lighttpd-static-arm32v6:${TAG_VERSION} -f Dockerfile.arm32v6 .
+docker run --name "my-lighttpd" --rm  -P -t -d \
+	-v `pwd`/static:/var/www/htdocs \
+	alpine-lighttpd-static-arm32v6:${TAG_VERSION}
+docker exec -it my-lighttpd /bin/sh -i
+docker stop
+
+docker tag  alpine-lighttpd-static-arm32v6:${TAG_VERSION} dpcrook/alpine-lighttpd-static:${TAG_VERSION}-arm32v6
+docker push                                               dpcrook/alpine-lighttpd-static:${TAG_VERSION}-arm32v6
+docker tag  alpine-lighttpd-static-arm32v6:${TAG_VERSION} dpcrook/alpine-lighttpd-static:latest-arm32v6
+docker push                                               dpcrook/alpine-lighttpd-static:latest-arm32v6
+```
