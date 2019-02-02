@@ -22,10 +22,10 @@ e.g. in your `spec.containers`:
 ```
 
 
-## Docker Hub
+# Docker Hub
 
 
-### arm32v6 version
+## arm32v6 version
 
 Alpine Linux does not currently maintain a separate arm32v7 version.
 
@@ -36,6 +36,8 @@ docker run --name "my-lighttpd" --rm  -P -t -d \
 	-v `pwd`/static:/var/www/htdocs \
 	alpine-lighttpd-static-arm32v6:${TAG_VERSION}
 docker exec -it my-lighttpd /bin/sh -i
+cat /var/log/lighttpd/error.log
+exit
 docker stop <CONTAINER_ID>
 
 docker tag  alpine-lighttpd-static-arm32v6:${TAG_VERSION} dpcrook/alpine-lighttpd-static:${TAG_VERSION}-arm32v6
