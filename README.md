@@ -27,10 +27,10 @@ e.g. in your `spec.containers`:
 
 ## arm32v6 version
 
-Alpine Linux does not currently maintain a separate arm32v7 version.
+Alpine Linux now has a separate arm32v7 version. See `README.md.arm32v7`
 
 ```
-TAG_VERSION=0.1.4
+TAG_VERSION=0.1.5
 docker build --no-cache -t alpine-lighttpd-static-arm32v6:${TAG_VERSION} -f Dockerfile.arm32v6 .
 docker run --name "my-lighttpd" --rm  -P -t -d \
 	-v `pwd`/static:/var/www/htdocs \

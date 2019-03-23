@@ -1,0 +1,21 @@
+FROM arm32v7/alpine:3.9
+# https://hub.docker.com/r/arm32v6/alpine/
+
+MAINTAINER <idcrook@users.noreply.github.com>
+
+RUN apk add --no-cache --update \
+	lighttpd \
+  && rm -rf /var/cache/apk/*
+
+RUN mkdir -p /var/lib/lighttpd/cache/compress \
+    && chown -R lighttpd:lighttpd /var/lib/lighttpd/
+
+# copy config files
+COPY etc/lighttpd/* /etc/lighttpd/
+
+EXPOSE 80
+
+# this is where files get served from. mount externally
+VOLUME /var/www
+
+ENTRYPOINT ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
