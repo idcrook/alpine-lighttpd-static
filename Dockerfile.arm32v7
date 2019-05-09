@@ -1,5 +1,5 @@
-FROM arm32v7/alpine:3.9
-# https://hub.docker.com/r/arm32v6/alpine/
+FROM arm32v7/alpine:edge
+# https://hub.docker.com/r/arm32v7/alpine/
 
 MAINTAINER <idcrook@users.noreply.github.com>
 
