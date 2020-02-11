@@ -1,5 +1,5 @@
 FROM arm64v8/alpine:latest
-# 2019-Dec-05: 3.10.3
+# 2019-Feb-11: 3.11.3
 MAINTAINER <idcrook@users.noreply.github.com>
 
 # https://hub.docker.com/r/arm64v8/alpine/
