@@ -1,4 +1,6 @@
-FROM arm64v8/alpine:latest
+FROM arm64v8/alpine:edge
+# 2019-Feb-16: 20200122
+#FROM arm64v8/alpine:latest
 # 2019-Feb-11: 3.11.3
 MAINTAINER <idcrook@users.noreply.github.com>
 
