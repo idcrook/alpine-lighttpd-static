@@ -4,7 +4,7 @@ Build arm64v8 version
 =====================
 
 ```
-TAG_VERSION=0.1.12-arm64v8
+TAG_VERSION=0.1.13-arm64v8
 sudo docker build --no-cache -t alpine-lighttpd-static:${TAG_VERSION} -f Dockerfile.arm64v8 .
 sudo docker run --name "my-lighttpd" --rm  -P -t -d \
 	-v `pwd`/static:/var/www/htdocs \
