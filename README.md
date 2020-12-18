@@ -54,14 +54,6 @@ exit
 docker container stop "my-lighttpd"
 ```
 
-### arm32v6 version
-
-See `Dockerfile.arm64v6` for arm32v6 Dockerfile and building
-
-### arm32v7 version
-
-See `Dockerfile.arm64v7` for arm32v7 Dockerfile and building
-
 ### arm64 version
 
 See `Dockerfile.arm64v8` for arm64 Dockerfile and `README.arm64v8.md` for building
