@@ -15,7 +15,7 @@ RUN apk add --no-cache --update \
   && rm -rf /var/cache/apk/*
 
 # support for caching/compression
-RUN mkdir -p /var/lib/lighttpd/cache/compress \
+RUN mkdir -p /var/lib/lighttpd/cache/deflate/ \
     && chown -R lighttpd:lighttpd /var/lib/lighttpd/
 
 # copy config files
