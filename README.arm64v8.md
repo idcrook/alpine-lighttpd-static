@@ -13,6 +13,8 @@ sudo docker exec -it my-lighttpd /bin/sh -i
 # grep ^ /var/log/lighttpd/*.log
 # ls -l /var/lib/lighttpd/cache/deflate/
 # exit
+# sudo docker ps
+# curl  0.0.0.0:49154  # get actual port from previous command output
 sudo docker stop <CONTAINER_ID>
 
 sudo docker login
