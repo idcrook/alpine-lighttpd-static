@@ -4,7 +4,7 @@ Build arm64v8 version
 =====================
 
 ```shell
-TAG_VERSION=0.1.15-arm64v8
+TAG_VERSION=0.1.16-arm64v8
 sudo docker build --no-cache -t alpine-lighttpd-static:${TAG_VERSION} -f Dockerfile.arm64v8 .
 sudo docker run --name "my-lighttpd" --rm  -P -t -d \
 	-v `pwd`/static:/var/www/htdocs \
@@ -15,6 +15,7 @@ sudo docker exec -it my-lighttpd /bin/sh -i
 # exit
 # sudo docker ps
 # curl  0.0.0.0:49154  # get actual port from previous command output
+# curl -6 [::]:49153
 sudo docker stop <CONTAINER_ID>
 
 sudo docker login
