@@ -1,10 +1,12 @@
 <!--- -*- markdown -*- --->
 
+[dpcrook/alpine-lighttpd-static Tags | Docker Hub](https://hub.docker.com/r/dpcrook/alpine-lighttpd-static/tags)
+
 Build arm64v8 version
 =====================
 
 ```shell
-TAG_VERSION=0.1.17-arm64v8
+TAG_VERSION=0.1.18-arm64v8
 sudo docker build --no-cache -t alpine-lighttpd-static:${TAG_VERSION} -f Dockerfile.arm64v8 .
 sudo docker run --name "my-lighttpd" --rm  -P -t -d \
 	-v `pwd`/static:/var/www/htdocs \
