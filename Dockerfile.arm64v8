@@ -2,6 +2,7 @@ FROM arm64v8/alpine:edge
 
 # https://hub.docker.com/r/arm64v8/alpine/
 
+# 2022-Jan-20 : edge (20210804), lighttpd-1.4.64-r0 
 # 2021-Dec-01 : edge (20210804), lighttpd-1.4.63-r0 
 # 2021-Dec-01 : 3.15.0, lighttpd-1.4.61-r1
 # 2021-Oct-29 : (edge) 20210804, lighttpd-1.4.61-r0 
@@ -13,7 +14,7 @@ FROM arm64v8/alpine:edge
 # 2020-Apr-12 : 20200319, lighttpd-1.4.55-r1
 # 2019-Feb-16 : 20200122
 
-LABEL maintainer="idcrook@users.noreply.github.com" lighttpd-version="1.4.63-r0"
+LABEL maintainer="idcrook@users.noreply.github.com" lighttpd-version="1.4.64-r0"
 
 RUN apk add --no-cache --update \
 	lighttpd \
