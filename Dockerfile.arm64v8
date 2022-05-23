@@ -1,8 +1,9 @@
-FROM arm64v8/alpine:edge
+FROM arm64v8/alpine:3.16.0
+#FROM arm64v8/alpine:edge
 
 # https://hub.docker.com/r/arm64v8/alpine/
 
-# 2022-Dec-31 : edge (2022..), lighttpd-1.4...-r0 
+# 2022-May-23 : 3.16.0, lighttpd-1.4.64-r0 
 # 2022-Jan-20 : edge (20210804), lighttpd-1.4.64-r0 
 # 2021-Dec-01 : edge (20210804), lighttpd-1.4.63-r0 
 # 2021-Dec-01 : 3.15.0, lighttpd-1.4.61-r1
