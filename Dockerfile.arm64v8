@@ -1,30 +1,15 @@
-FROM arm64v8/alpine:edge
-#FROM arm64v8/alpine:3.17.0
+FROM arm64v8/alpine:3.18.0
+#FROM arm64v8/alpine:edge
 
 # https://hub.docker.com/r/arm64v8/alpine/
 
+# 2023-May-14: 3.18, lighttpd-1.4.70-r0 
 # 2023-May-07: edge (20230329) lighttpd-1.4.69-r2
-# 2023-Jan-12: edge (20230208) lighttpd-1.4.69-r0 
-# 2023-Jan-12: edge (???), lighttpd-1.4.68-r0 
-# 2022-Sep-18: edge (20220715), lighttpd-1.4.67-r0 
-# 2022-Sep-15: edge (20220328), lighttpd-1.4.66-r0 
-# 2022-May-23 : 3.16.0, lighttpd-1.4.64-r0 
-# 2022-Jan-20 : edge (20210804), lighttpd-1.4.64-r0 
-# 2021-Dec-01 : edge (20210804), lighttpd-1.4.63-r0 
-# 2021-Dec-01 : 3.15.0, lighttpd-1.4.61-r1
-# 2021-Oct-29 : (edge) 20210804, lighttpd-1.4.61-r0 
-# 2021-Oct-20 : (edge) 20210804, lighttpd-1.4.59-r2 
-# 2021-Oct-04 : (edge) 20210804, lighttpd-1.4.59-r1 
-# 2021-Feb-11 : (edge) 20201218, lighttpd-1.4.59-r0 
-# 2020-Dec-18 : (edge) 20201218, lighttpd-1.4.57-r0
-# 2020-Jun-01 : 3.12, lighttpd-1.4.55-r1 
-# 2020-Apr-12 : 20200319, lighttpd-1.4.55-r1
-# 2019-Feb-16 : 20200122
 
-LABEL maintainer="idcrook@users.noreply.github.com" lighttpd-version="1.4.69-r2"
+LABEL maintainer="idcrook@users.noreply.github.com" lighttpd-version="1.4.70-r0"
 
 # https://alpinelinux.org/posts/Alpine-edge-signing-keys-rotated.html +  --allow-untrusted
-RUN apk add -X https://dl-cdn.alpinelinux.org/alpine/v3.17/main -u alpine-keys --allow-untrusted
+RUN apk add -X https://dl-cdn.alpinelinux.org/alpine/v3.18/main -u alpine-keys --allow-untrusted
 
 RUN apk --no-cache add \
 	lighttpd
