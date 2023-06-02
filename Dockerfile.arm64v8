@@ -3,10 +3,11 @@ FROM arm64v8/alpine:3.18.0
 
 # https://hub.docker.com/r/arm64v8/alpine/
 
+# 2023-Jun-02: 3.18, lighttpd-1.4.71-r0 
 # 2023-May-14: 3.18, lighttpd-1.4.70-r0 
 # 2023-May-07: edge (20230329) lighttpd-1.4.69-r2
 
-LABEL maintainer="idcrook@users.noreply.github.com" lighttpd-version="1.4.70-r0"
+LABEL maintainer="idcrook@users.noreply.github.com" lighttpd-version="1.4.71-r0"
 
 # https://alpinelinux.org/posts/Alpine-edge-signing-keys-rotated.html +  --allow-untrusted
 RUN apk add -X https://dl-cdn.alpinelinux.org/alpine/v3.18/main -u alpine-keys --allow-untrusted
