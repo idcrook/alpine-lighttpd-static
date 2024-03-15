@@ -4,18 +4,21 @@ FROM arm64v8/alpine:edge
 # https://hub.docker.com/r/arm64v8/alpine/
 # https://pkgs.alpinelinux.org/package/edge/main/armhf/lighttpd
 
+# 2024-Mar-14: edge, lighttpd-1.4.75-r0 
+# 2024-Feb-26: edge, lighttpd-1.4.74-r0 
 # 2023-Oct-31: edge, lighttpd-1.4.73-r0 
 # 2023-Oct-08: edge, lighttpd-1.4.72-r0 
-# 2023-Jun-02: 3.18, lighttpd-1.4.71-r0 
-# 2023-May-14: 3.18, lighttpd-1.4.70-r0 
-# 2023-May-07: edge (20230329) lighttpd-1.4.69-r2
 
-LABEL maintainer="idcrook@users.noreply.github.com" lighttpd-version="1.4.73-r0"
+
+LABEL maintainer="idcrook@users.noreply.github.com" lighttpd-version="1.4.75-r0"
 
 # https://alpinelinux.org/posts/Alpine-edge-signing-keys-rotated.html +  --allow-untrusted
 #RUN apk add -X https://dl-cdn.alpinelinux.org/alpine/v3.18/main -u alpine-keys --allow-untrusted
 
+# On lighttpd-1.4.75, Error relocating /usr/sbin/lighttpd: preadv2: symbol not found
+# add musl-dev to workaround
 RUN apk --no-cache add \
+    musl-dev \
 	lighttpd
 
 # support for caching/compression
