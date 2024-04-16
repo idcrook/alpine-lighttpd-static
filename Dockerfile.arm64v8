@@ -4,7 +4,7 @@ FROM arm64v8/alpine:edge
 # https://hub.docker.com/r/arm64v8/alpine/
 # https://pkgs.alpinelinux.org/package/edge/main/armhf/lighttpd
 
-# 2024-Mar-14: edge, lighttpd-1.4.76-r0 
+# 2024-Apr-15: edge, lighttpd-1.4.76-r0 
 # 2024-Mar-14: edge, lighttpd-1.4.75-r0 
 # 2024-Feb-26: edge, lighttpd-1.4.74-r0 
 # 2023-Oct-31: edge, lighttpd-1.4.73-r0 
