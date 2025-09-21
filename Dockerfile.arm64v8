@@ -4,10 +4,11 @@ FROM arm64v8/alpine:edge
 # https://hub.docker.com/r/arm64v8/alpine/
 # https://pkgs.alpinelinux.org/package/edge/main/armhf/lighttpd
 
+# 2025-Sep-21: edge, lighttpd-1.4.82-r0
 # 2025-Apr-04: edge, lighttpd-1.4.79-r0
 # 2025-Jan-12: edge, lighttpd-1.4.77-r0
 
-LABEL maintainer="idcrook@users.noreply.github.com" lighttpd-version="1.4.79-r0"
+LABEL maintainer="idcrook@users.noreply.github.com" lighttpd-version="1.4.82-r0"
 
 # https://alpinelinux.org/posts/Alpine-edge-signing-keys-rotated.html +  --allow-untrusted
 #RUN apk add -X https://dl-cdn.alpinelinux.org/alpine/v3.18/main -u alpine-keys --allow-untrusted
